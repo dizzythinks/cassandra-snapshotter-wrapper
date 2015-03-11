@@ -7,10 +7,10 @@ Why?
 
 cassandra-snapshotter is great for creating full backups of your Cassandra clusters in S3. However, it is a command line tool which takes many arguments so when running from cron it can become messy. Additionally, as it is quite noisy with its output. This was a quick hack up to:
 
-a) supress/redirect the output in a friendler way
-b) make it nicer to manage new backup requirement via a config file
-c) dynamically find my cassandra clusters that run in autoscale groups
-d) a stop-gap that would be quicker than forking and refactoring the original
+a. supress/redirect the output in a friendler way
+b. make it nicer to manage new backup requirement via a config file
+c. dynamically find my cassandra clusters that run in autoscale groups
+d. a stop-gap that would be quicker than forking and refactoring the original
 
 Requirements
 ============
