@@ -5,7 +5,7 @@ A wrapper script for [cassandra-snapshotter](https://github.com/tbarbugli/cassan
 Why?
 ====
 
-cassandra-snapshotter is great for creating full backups of your Cassandra clusters in S3. However, it is a command line tool which takes many arguments so when running from cron it can become messy. Additionally, as it is quite noisy with its output. This was a quick hack up to:
+cassandra-snapshotter is great for creating full backups of your Cassandra clusters in S3. However, it is a command line tool which takes many arguments so when running from cron it can become messy. Additionally, as it is quite noisy with its output and because it uses Fabric and remote SSH it doesn;t respect a local command line redirect for the output. So, this was a quick hack up to:
 
 * supress/redirect the output in a friendler way
 * make it nicer to manage new backup requirement via a config file
