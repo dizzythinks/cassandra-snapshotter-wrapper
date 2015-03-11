@@ -1,9 +1,9 @@
 snapshot:
     myproduct:
-        aws_access_key_id: 'XXXXXXXXXXXXXXXXXXXX'
-        aws_secret_access_key: 'XXXXXXXXXXXXXXXXXXX'
-        s3_bucket_name: 'mybucket'
-        s3_bucket_region: 'eu-west-1'
-        s3_base_path: 'mybackup'
-        autoscale_group: 'myautoscalegroup'
+        aws_access_key_id: "XXXXXXXXXXXXXXXXXXXX"
+        aws_secret_access_key: "XXXXXXXXXXXXXXXXXXX"
+        s3_bucket_name: "mybucket"
+        s3_bucket_region: "eu-west-1"
+        s3_base_path: "mybackup"
+        autoscale_group: "myautoscalegroup"
 

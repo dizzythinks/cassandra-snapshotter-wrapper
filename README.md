@@ -35,12 +35,12 @@ autoscale_group: this is the long name of your autoscale group as per the EC2 co
 
         snapshot:
             myproduct:
-                aws_access_key_id: 'XXXXXXXXXXXXXXXXXXXX'
-                aws_secret_access_key: 'XXXXXXXXXXXXXXXXXXX'
-                s3_bucket_name: 'mybucket'
-                s3_bucket_region: 'eu-west-1'
-                s3_base_path: 'mybackup'
-                autoscale_group: 'myautoscalegroup'
+                aws_access_key_id: "XXXXXXXXXXXXXXXXXXXX"
+                aws_secret_access_key: "XXXXXXXXXXXXXXXXXXX"
+                s3_bucket_name: "mybucket"
+                s3_bucket_region: "eu-west-1"
+                s3_base_path: "mybackup"
+                autoscale_group: "myautoscalegroup"
 
 You will now need to create /var/log/snapshotter and ensure that the user you intend to use has write access to it. Logs will appear here in the format myproduct_snapshotter.log
 
