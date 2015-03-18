@@ -42,6 +42,18 @@ autoscale_group: this is the long name of your autoscale group as per the EC2 co
                 s3_base_path: "mybackup"
                 autoscale_group: "myautoscalegroup"
 
+If your cluster is not running in AWS (or is not wrapped into ASG) you can also specify a list of instances manually; in order to do so first set autoscale_group to 'None' and then specify a string of hosts that form the cluster
+
+        snapshot:
+            myproduct:
+                aws_access_key_id: "XXXXXXXXXXXXXXXXXXXX"
+                aws_secret_access_key: "XXXXXXXXXXXXXXXXXXX"
+                s3_bucket_name: "mybucket"
+                s3_bucket_region: "eu-west-1"
+                s3_base_path: "mybackup"
+                autoscale_group: "None"
+                instances: "fqdn-1,fqdn-2"
+
 You will now need to create /var/log/snapshotter and ensure that the user you intend to use has write access to it. Logs will appear here in the format myproduct_snapshotter.log
 
 
