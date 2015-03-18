@@ -88,7 +88,12 @@ def main():
     except:
         logger.error('Product %s not found in config.yaml' % args.p)
         sys.exit(2)
-    instances = get_hosts_from_asg(config['snapshot'][args.p])
+
+    if config['snapshot'][args.p]['autoscale_group'] == 'None':
+        instances = config['snapshot'][args.p]['instances']
+    else:
+        instances = get_hosts_from_asg(config['snapshot'][args.p])
+
     command = get_command(config['snapshot'][args.p], instances)
     if DEBUG:
         logger.debug('Executing command in subprocess: %s' % command)
